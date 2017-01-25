@@ -27,7 +27,7 @@ def upload():
 
 @app.route("/learning",methods=['POST'])
 def learning():
-    data = json.loads(request.data)
+    data = ".\input"
     # data == {"userInput": "whatever text you entered"}
     response = house_price(data)
     return jsonify(response)

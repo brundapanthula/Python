@@ -247,6 +247,3 @@ def house_price(path):
     data_visualize(target,train)
     #Finally working with ridge and lasso regression to get important features and biuld a model in XGBoost
     model_build(target,train,test,path,data_test)
-
-path = "H:\\Kaggle\\housingprice\\"
-house_price(path)
