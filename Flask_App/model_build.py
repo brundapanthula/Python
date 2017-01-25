@@ -13,9 +13,9 @@ os.environ['PATH'] = mingw_path + ';' + os.environ['PATH']
 
 import xgboost as xgb
 
-def read_data(path):
-    train = pd.read_csv(path + "train.csv") # the train dataset is now a Pandas DataFrame
-    test = pd.read_csv(path + "test.csv") # the train dataset is now a Pandas DataFrame
+def read_data(train,test):
+    train = pd.read_csv("train.csv") # the train dataset is now a Pandas DataFrame
+    test = pd.read_csv("test.csv") # the train dataset is now a Pandas DataFrame
     return train,test
 
 def data_insights(df_train,df_test):
@@ -217,7 +217,7 @@ def model_build(y_train,train,test,path,data_test):
 def house_price(path):
     #reading data
     type(path)
-    data = read_data(path)
+    data = read_data(train,test)
     data_train = data[0]
     data_test = data[1]
     #data insights
